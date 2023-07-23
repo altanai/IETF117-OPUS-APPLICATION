@@ -1,0 +1,3 @@
+mean score: 1.2386820495128632
+bottom mean score: 1.1286050975322723
+top mean score: 1.4078910291194915

@@ -1,0 +1,9 @@
+input: /Users/albisht/opus/dnn/torch/testsuite/Input
+output: /Users/albisht/opus/dnn/torch/testsuite/output_30_dred
+processing:
+- sox {INPUT} {INPUT}.raw
+- /Users/albisht/opus/opus_demo voip 16000 1 9000 -loss 30 -complexity 0 -dred {INPUT}.raw
+  {INPUT}.decoded.raw
+- sox -r 16000 -L -e signed-integer -b 16 -c 1 {INPUT}.decoded.raw {OUTPUT}
+seed: null
+test: OPUS DRED extension reference test
